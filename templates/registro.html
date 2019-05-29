@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% block titulo %}
+<title>Criar Nova Conta</title>
+{% endblock %}
+
+{% block conteudo %}
+<style>
+body {
+  background-image: url("/static/m4a4.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  margin-right: 10px;
+  background-size:118%;
+  background-attachment:fixed;
+}
+</style>
+<center>
+    <font color="#dce3ef">
+    <h1>Criar nova Conta</h1>
+    <form method="post">
+        <fieldset>
+            <h4>Utilizador</h4>
+            <input type="text" name="utilizador" required>
+            <p><br></p>
+            <h4>Endereço de Email</h4>
+            <input type="text" name="email" required>
+            <p><br></p>
+            <h4>Palavra-Passe</h4>
+            <input type="password" name="passe" required>
+            <p><br></p>
+            <h4>Confirme a Passe</h4>
+            <input type="password" name="cpasse" required>
+            <p><br></p>
+            <a href="criar"><input name="Button1" onclick="criar.html" style="width: 200px; height: 25px" type="button" value="Criar!"/></a>
+        </fieldset>
+    </form>
+    {% if erro %}<h4>{{ erro }}</h4>{% endif %}
+</center>
+{% endblock %}
